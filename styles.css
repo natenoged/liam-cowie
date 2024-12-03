@@ -1,0 +1,136 @@
+/* Fonts */
+@font-face {
+    font-family: 'Redaction35';
+    src: url('fonts/Redaction_35-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction50';
+    src: url('fonts/Redaction_50-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E9E8EB;
+}
+
+.body-wrapper {
+    display: flex;
+    background: #E9E8EB;
+    padding: 0;
+}
+
+/* Left Wrapper Styles */
+.left-wrapper {
+    width: 480px;
+    height: 100%;
+    padding: 40px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.titles-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    font-family: 'Redaction50', sans-serif;
+    
+}
+
+.headline .name {
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.roles {
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: stretch;
+    font-family: 'Redaction35', sans-serif;
+    
+}
+
+.work-categories, .location {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.gifs {
+    display: flex;
+    align-items: center;
+    
+}
+
+.gifs img {
+    max-height: 140px;
+    
+}
+
+
+.contact-info {
+    color: #0000FF;
+    font-size: 18px;
+    text-decoration: underline;
+    text-transform: lowercase;
+    line-height: 1.5;
+    
+    
+}
+
+.contact-info a:hover {
+    opacity: 60%;
+
+}
+
+
+/* Gallery Styles */
+.gallery {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.gallery .gallery-image {
+    max-width: 50%;
+    height: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.20);
+    margin-bottom: 20px;
+}
+
+/* Responsive Design 
+@media (max-width: 1200px) {
+    .body-wrapper {
+        flex-direction: column;
+    }
+
+    .left-wrapper {
+        width: 100%;
+    }
+}*/
