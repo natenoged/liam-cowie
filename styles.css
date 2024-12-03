@@ -25,9 +25,7 @@ body {
 }
 
 .body-wrapper {
-    display: flex;
     background: #E9E8EB;
-    padding: 0;
 }
 
 /* Left Wrapper Styles */
@@ -47,20 +45,20 @@ body {
     flex-direction: column;
     align-self: stretch;
     font-family: 'Redaction50', sans-serif;
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+    color: black;
+    line-height: 1.2;
     
 }
 
 .headline .name {
-    color: black;
-    font-size: 36px;
-    font-weight: 400;
+    
 }
 
 .roles {
-    color: black;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.2;
+    
 }
 
 .links-wrapper {
@@ -85,7 +83,7 @@ body {
 }
 
 .gifs img {
-    max-height: 140px;
+    max-height: 120px;
     
 }
 
@@ -124,13 +122,66 @@ body {
     margin-bottom: 20px;
 }
 
-/* Responsive Design 
-@media (max-width: 1200px) {
-    .body-wrapper {
-        flex-direction: column;
-    }
-
+/* Responsive Design */
+@media (max-width: 800px) {
+    
     .left-wrapper {
         width: 100%;
+        padding: 40px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: flex-start;
+        gap: 20px;
     }
-}*/
+
+    .titles-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        font-family: 'Redaction50', sans-serif;
+        color: black;
+        font-size: 28px;
+        font-weight: 400;
+        color: black;
+        line-height: 1.2;
+        
+    }
+
+    .links-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: 'Redaction35', sans-serif;
+        
+    }
+
+    .gifs {
+        display: flex;
+        align-items: center;
+        
+    }
+    
+    .gifs img {
+        max-height: 50px;
+        
+    }
+
+    .gallery {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        
+        gap: 10px;
+    }
+    
+    .gallery .gallery-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.20);
+        
+    }
+}
