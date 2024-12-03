@@ -1,0 +1,26 @@
+name: Generate Image List
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'images/**'
+
+jobs:
+  generate-image-list:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Generate image list
+      run: |
+        cd $GITHUB_WORKSPACE
+        ls images/*.webp | sed 's/images\///g' > image-list.json
+    
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add image-list.json
+        git commit -m "Update image list" || exit 0
+        git push
