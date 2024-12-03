@@ -1,24 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.querySelector('.gallery');
-    const imageFolder = './images/';
+    const imageFolder = './images/'; // Path to your images folder
+    const totalImages = 29; // Manually set the total number of images
+    const fileExtension = 'webp'; // Change this if using a different image format
 
-    // Fetch the image list
-    fetch('image-list.json')
-        .then(response => response.text())
-        .then(imageListText => {
-            // Split the text into an array, removing any empty lines
-            const imageFiles = imageListText.trim().split('\n');
-
-            // Populate gallery
-            imageFiles.forEach((filename, index) => {
-                const img = document.createElement('img');
-                img.src = `${imageFolder}${filename}`;
-                img.alt = `Gallery Image ${index + 1}`;
-                img.classList.add('gallery-image');
-                gallery.appendChild(img);
-            });
-        })
-        .catch(error => {
-            console.error('Error loading image list:', error);
-        });
+    // Populate gallery
+    for (let i = 1; i <= totalImages; i++) {
+        const img = document.createElement('img');
+        img.src = `${imageFolder}${i}.${fileExtension}`;
+        img.alt = `Gallery Image ${i}`;
+        img.classList.add('gallery-image'); // Adding a consistent class
+        gallery.appendChild(img);
+    }
 });
