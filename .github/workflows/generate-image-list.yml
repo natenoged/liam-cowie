@@ -12,15 +12,19 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: Debug file list
+      run: |
+        ls images/*.webp || echo "No .webp files found"
+
     - name: Generate image list
       run: |
-        cd $GITHUB_WORKSPACE
-        ls images/*.webp | sed 's/images\///g' > image-list.json
-    
+        ls images/*.webp | sed 's|images/||g' > image-list.json
+        cat image-list.json # Debug: Check contents
+
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add image-list.json
-        git commit -m "Update image list" || exit 0
+        git commit -m "Update image list" || echo "No changes to commit"
         git push
