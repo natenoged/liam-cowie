@@ -1,4 +1,4 @@
-### Adding Images
+Adding Images
 
   1. Convert Images to Webp > https://cloudconvert.com/jpeg-to-webp
     (Important for file size and site load time, less thatn 1mb each is ideal)
@@ -13,11 +13,11 @@
 
   NOTE: In order for the images to show correctly they must be named consecutively 1.webp, 2.webp, 3.webp
 
-### Changing Text
+Changing Text
 
-     1. Open 'index.html'
+   1. Open 'index.html'
 
-     2. Change text
+   2. Change text
 
-     3. Commit changes
-     
+   3. Commit changes
+   
