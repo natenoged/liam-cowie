@@ -1,7 +1,7 @@
 Adding Images
 
   1. Convert Images to Webp > https://cloudconvert.com/jpeg-to-webp
-    (Important for file size and site load time)
+    (Important for file size and site load time, less thatn 1mb each is ideal)
      
   2. Rename Images in the order you wish for them to appear "1.webp" appears first etc.
   
